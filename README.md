@@ -56,4 +56,4 @@ https://gist.github.com/Kartones/dd3ff5ec5ea238d4c546
 
 ### Update
 
-If you're liking psql, you'll really like [pgcli](https://www.pgcli.com). With built in auto-completion and better syntax highlighting, you can work even faster. Currently, I'm enjoying writing sql queries in VS Code and running them in pgcli (which I've aliased as `psql_plus`, given its added benefits) with the `\i $PATH/$FILE.sql` command. This allows me to save sql files alongside files in other languages on a per project basis.
+If you're liking psql, you'll really like [pgcli](https://www.pgcli.com). With built in auto-completion and better syntax highlighting, you can work even faster. Currently, I'm enjoying writing sql queries in VS Code and running them in pgcli (which I've aliased as `psql_plus`, given its added benefits) with the `\i $PATH/$FILE.sql` command. This allows me to save sql files alongside other files on a per project basis.
