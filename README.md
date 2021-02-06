@@ -37,10 +37,11 @@ au BufRead $TMP_PATH/psql.edit.* set syntax=sql
 
 - List tables: `\dt $SCHEMA.*`
 - List views: `\dv $SCHEMA.*`
-- See view definition: `\dv+ $SCHEMA.$TABLE`
+- See view definition: `\d+ $SCHEMA.$VIEW`
 - Editor mode: `\e`
 - Export as csv: `\copy (SELECT * FROM $TABLE) TO '$PATH/$FILE.csv' WITH CSV`
 - Import as csv: `\copy $TABLE FROM '$PATH/$FILE.csv' DELIMITER ',' CSV HEADER`
+- Run query from file: `\i $PATH/$FILE.sql`
 - Clear console: `\! clear`
 - Quit results: `q`
 - Quit psql: `control d`
@@ -52,3 +53,7 @@ https://www.postgresql.org/docs/9.3/app-psql.html#APP-PSQL-PROMPTING
 https://unencumberedbyfacts.com/2016/01/04/psql-vim-happy-face/
 
 https://gist.github.com/Kartones/dd3ff5ec5ea238d4c546
+
+### Update
+
+If you're liking psql, you'll really like [pgcli](https://www.pgcli.com). With built in auto-completion and better syntax highlighting, you can work even faster. Currently, I'm enjoying writing sql queries in VS Code and running them in pgcli (which I've aliased as `psql_plus`, given its added benefits) with the `\i $PATH/$FILE.sql` command. This allows me to save sql files alongside files in other languages on a per project basis.
