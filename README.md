@@ -1,6 +1,6 @@
 # psql
  
-A little trickier to use than a PostgreSQL GUI at first, but once you make the switch, you'll never turn back. I'm a recovering Navicat user of 5 years and made this cheat sheet for future me and anyone else making the leap to the command line.
+A quick start guide to using PostgreSQL on the command line.
 
 ### Set Alias
 
@@ -39,12 +39,16 @@ au BufRead $TMP_PATH/psql.edit.* set syntax=sql
 - List views: `\dv $SCHEMA.*`
 - See view definition: `\d+ $SCHEMA.$VIEW`
 - Editor mode: `\e`
-- Export as csv: `\copy (SELECT * FROM $TABLE) TO '$PATH/$FILE.csv' WITH CSV`
+- Export as csv: `\copy (SELECT * FROM $TABLE) TO '$PATH/$FILE.csv' CSV HEADER`
 - Import as csv: `\copy $TABLE FROM '$PATH/$FILE.csv' DELIMITER ',' CSV HEADER`
 - Run query from file: `\i $PATH/$FILE.sql`
 - Clear console: `\! clear`
 - Quit results: `q`
 - Quit psql: `control d`
+
+### Pgcli
+
+Use [pgcli](https://www.pgcli.com) for built in auto-completion and better syntax highlighting. Write and save sql queries in VS Code, then run them with the `\i $PATH/$FILE.sql` command. This allows you to save sql files alongside other files on a per project basis.
 
 ### Resources
 
@@ -53,7 +57,3 @@ https://www.postgresql.org/docs/9.3/app-psql.html#APP-PSQL-PROMPTING
 https://unencumberedbyfacts.com/2016/01/04/psql-vim-happy-face/
 
 https://gist.github.com/Kartones/dd3ff5ec5ea238d4c546
-
-### Update
-
-If you're liking psql, you'll really like [pgcli](https://www.pgcli.com). With built in auto-completion and better syntax highlighting, you can work even faster. Currently, I'm enjoying writing sql queries in VS Code and running them in pgcli (which I've aliased as `psql_plus`, given its added benefits) with the `\i $PATH/$FILE.sql` command. This allows me to save sql files alongside other files on a per project basis.
